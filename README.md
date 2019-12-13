@@ -3,12 +3,7 @@ This DSM Policy designed for the MITRE ATT&CK Evaluation.
 Tested with  Deep Security Manager ™ 12.0.296, Deep Security Agent version 12.0.0-360 
 
 ## Support
-<<<<<<< HEAD
 This DSM Policy can be tuned as per the Customer infrstructure and environment. Project contributors may be able to help, depending on their time and availability. Please be specific about what you're trying to do, your system, and steps to reproduce the problem.
-=======
-This DSM Policy can be tuned as per the Customer Infrstructure and environment. Project contributors may be able to help, depending on their time and availability. Please be specific about what you're trying to do, your system, and steps to reproduce the problem.
->>>>>>> ab14ae351b0668a6a8fccc9ddc4f5afdf9e90426
-
 
 Official support from Trend Micro is not available. Individual contributors may be Trend Micro employees, but are not official support.
 
