@@ -19,4 +19,4 @@ We accept contributions from the community. To submit changes:
 1. Make your changes.
 1. Submit a pull request with an explanation of your changes or additions.
 
-We will review and work with you to release the code.
+We will review and work with you to release the policy.
