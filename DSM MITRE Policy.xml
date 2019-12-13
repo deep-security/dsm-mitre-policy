@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Export type="SecurityProfile" date="December 13, 2019 16:55" version="12.0.296">
+<Export type="SecurityProfile" date="December 13, 2019 21:13" version="12.0.296">
 	<SecurityProfiles>
 		<SecurityProfile id="10">
 			<TBUID></TBUID>
@@ -387,6 +387,31 @@ This rule will detect if the SSL/TLS server is using DHE weak parameters.</Descr
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="1307">
+			<TBUID>1704C95A-DAF3-1896-49C9-8F9D78F14BCD</TBUID>
+			<Name>Detected Rlogin Server Traffic (ATT&amp;CK T1021)</Name>
+			<Description>This filter detects Rlogin server traffic based on heuristics. Configuration options are provided to set the event frequency of this filter.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>350</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>5.2.0.5272</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>-1</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="4379">
 			<TBUID>A82300FE-01CB-1DD5-5BA1-D0C8ECEBD724</TBUID>
 			<Name>Identified Usage Of EXPORT Cipher Suite In SSLv2 Connection (ATT&amp;CK T1032)</Name>
@@ -428,31 +453,6 @@ Note: This is a heuristic based rule which identifies if any Export cipher suite
 			<Severity>4</Severity>
 			<Mode>1</Mode>
 			<MinimumAgentVersion>5.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>-1</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="1307">
-			<TBUID>1704C95A-DAF3-1896-49C9-8F9D78F14BCD</TBUID>
-			<Name>Detected Rlogin Server Traffic (ATT&amp;CK T1021)</Name>
-			<Description>This filter detects Rlogin server traffic based on heuristics. Configuration options are provided to set the event frequency of this filter.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>350</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>5.2.0.5272</MinimumAgentVersion>
 			<UserEdited>false</UserEdited>
 			<LogFirstPduTimeout>300</LogFirstPduTimeout>
 			<RequiresConfiguration>false</RequiresConfiguration>
@@ -543,31 +543,6 @@ Note: Configuration options are provided to set the protocols disallowed, ports 
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="2337">
-			<TBUID>E76366E5-EE43-CB07-D1C6-C32A60BA124D</TBUID>
-			<Name>FTP Server Possible Brute Force Attempt (ATT&amp;CK T1110)</Name>
-			<Description>This filter detects a brute force attempt to gain the FTP Server Password by inspecting the number of failed logins in a time period. An attacker may use automated tools to iterate through all combinations or use a dictionary attack to guess passwords.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>236</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>2</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>5.0.0.3000</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="3105">
 			<TBUID>DD92DE83-238A-8522-7B4D-426559ED9E45</TBUID>
 			<Name>Identified Suspicious Obfuscated JavaScript (ATT&amp;CK T1027)</Name>
@@ -611,6 +586,31 @@ Note: Configuration option can be used to enter error responses of the mail serv
 			<Severity>4</Severity>
 			<Mode>0</Mode>
 			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="2337">
+			<TBUID>E76366E5-EE43-CB07-D1C6-C32A60BA124D</TBUID>
+			<Name>FTP Server Possible Brute Force Attempt (ATT&amp;CK T1110)</Name>
+			<Description>This filter detects a brute force attempt to gain the FTP Server Password by inspecting the number of failed logins in a time period. An attacker may use automated tools to iterate through all combinations or use a dictionary attack to guess passwords.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>236</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>2</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>5.0.0.3000</MinimumAgentVersion>
 			<UserEdited>false</UserEdited>
 			<LogFirstPduTimeout>300</LogFirstPduTimeout>
 			<RequiresConfiguration>false</RequiresConfiguration>
@@ -751,31 +751,6 @@ Note: The triggers of this rule have to be investigated further to confirm attac
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="4160">
-			<TBUID>FD4769AF-23BB-EE79-4130-855EFDEE9485</TBUID>
-			<Name>Batch File Uploaded On Network Share (ATT&amp;CK T1105)</Name>
-			<Description>This is a heuristic based rule which detects if a batch (.bat) file is being uploaded on the Network share using SMB protocol.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>343</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>1</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="2880">
 			<TBUID>36B3D7AB-C33D-A104-4941-9B0AFB4A50EA</TBUID>
 			<Name>Identified Compression Algorithm In SSL/TLS (ATT&amp;CK T1002)</Name>
@@ -800,6 +775,31 @@ Note: Compression algorithm in SSL/TLS protocol is also used for legitimate purp
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>3</RecommendationsMode>
 			<CvssScore>2.60</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="4160">
+			<TBUID>FD4769AF-23BB-EE79-4130-855EFDEE9485</TBUID>
+			<Name>Batch File Uploaded On Network Share (ATT&amp;CK T1105)</Name>
+			<Description>This is a heuristic based rule which detects if a batch (.bat) file is being uploaded on the Network share using SMB protocol.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>343</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>1</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
@@ -1196,6 +1196,56 @@ Note: In some network environment, this rule could generate lots of trigger, the
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="5725">
+			<TBUID>8D4566AF-E335-BDAF-54BB-05CB0945DDE0</TBUID>
+			<Name>Prevent Windows Administrator User Login Over SMB (ATT&amp;CK T1077)</Name>
+			<Description>This rule is intended to prevent SMB login attempts by user, &quot;Administrator&quot; of administrator account type on any Windows platforms. Using an Administrator account for normal tasks is not suggested as it bypasses all Windows security measures.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>343</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>3</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion></MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="4189">
+			<TBUID>9E11A36D-5594-706E-9426-21A67117B33C</TBUID>
+			<Name>Executable File Uploaded On System32 Folder Through SMB Share (ATT&amp;CK T1105)</Name>
+			<Description>This is a heuristic based rule which detects if executable file is being uploaded in the &apos;System32&apos; directory through Network Share.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>343</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>1</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="7005">
 			<TBUID>6C4E3209-67EF-18CA-3BE4-216E82A211E7</TBUID>
 			<Name>Identified Remote Desktop Protocol (RDP) Brute Force Attempt (ATT&amp;CK T1076)</Name>
@@ -1248,56 +1298,6 @@ Note: In some network environment, this rule could generate lots of trigger, the
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="5725">
-			<TBUID>8D4566AF-E335-BDAF-54BB-05CB0945DDE0</TBUID>
-			<Name>Prevent Windows Administrator User Login Over SMB (ATT&amp;CK T1077)</Name>
-			<Description>This rule is intended to prevent SMB login attempts by user, &quot;Administrator&quot; of administrator account type on any Windows platforms. Using an Administrator account for normal tasks is not suggested as it bypasses all Windows security measures.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>343</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>3</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion></MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="4189">
-			<TBUID>9E11A36D-5594-706E-9426-21A67117B33C</TBUID>
-			<Name>Executable File Uploaded On System32 Folder Through SMB Share (ATT&amp;CK T1105)</Name>
-			<Description>This is a heuristic based rule which detects if executable file is being uploaded in the &apos;System32&apos; directory through Network Share.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>343</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>1</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="7006">
 			<TBUID>4AE183B0-05D9-F42A-950D-2CB7E76B1223</TBUID>
 			<Name>Identified Usage Of WMI Execute Methods - Server - 1 (ATT&amp;CK T1047)</Name>
@@ -1316,32 +1316,6 @@ Note: In some network environment, this rule could generate lots of trigger, the
 			<LogFirstPduTimeout>300</LogFirstPduTimeout>
 			<RequiresConfiguration>false</RequiresConfiguration>
 			<RequiresTBUIDs>FD4D8D1F-99F2-1377-E674-405A840AF2A8</RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="7007">
-			<TBUID>BDAA9C96-579B-7083-8EF3-A3CBFA27E0EF</TBUID>
-			<Name>Block Administrative Share - 1 (ATT&amp;CK T1077,T1105)</Name>
-			<Description>Administrative Shares are the default network shares created by all Windows NT-based operating systems. These default shares share every hard drive partition in the system and the windows directory. 
-This filter blocks attempt to access administrative share on a windows machine.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>343</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>2</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>5.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
 			<Alert>false</Alert>
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>3</RecommendationsMode>
@@ -1373,6 +1347,57 @@ Note: CBC Based cipher suites in SSLv3.0 protocol are also used for legitimate p
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>-1</RecommendationsMode>
 			<CvssScore>4.30</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="7007">
+			<TBUID>BDAA9C96-579B-7083-8EF3-A3CBFA27E0EF</TBUID>
+			<Name>Block Administrative Share - 1 (ATT&amp;CK T1077,T1105)</Name>
+			<Description>Administrative Shares are the default network shares created by all Windows NT-based operating systems. These default shares share every hard drive partition in the system and the windows directory. 
+This filter blocks attempt to access administrative share on a windows machine.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>343</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>2</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>5.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="7008">
+			<TBUID>AD883D37-A4E4-713A-2BA8-CCAA54E59A05</TBUID>
+			<Name>Detected Terminal Services (RDP) Server Traffic - 1 (ATT&amp;CK T1015,T1043,T1076,T1048,T1032,T1071)</Name>
+			<Description>This DPI rule detects RDP server traffic based on heuristics. An event indicates suspicious activity since RDP traffic over non-standard ports indicates the presence of a backdoor RDP server installation.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>350</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>5.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
@@ -1425,31 +1450,6 @@ Note: This DPI rule should be applied ONLY in server environments where upload o
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>3</RecommendationsMode>
 			<CvssScore>9.30</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="7008">
-			<TBUID>AD883D37-A4E4-713A-2BA8-CCAA54E59A05</TBUID>
-			<Name>Detected Terminal Services (RDP) Server Traffic - 1 (ATT&amp;CK T1015,T1043,T1076,T1048,T1032,T1071)</Name>
-			<Description>This DPI rule detects RDP server traffic based on heuristics. An event indicates suspicious activity since RDP traffic over non-standard ports indicates the presence of a backdoor RDP server installation.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>350</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>5.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
@@ -1632,6 +1632,31 @@ Note: Triggers of this rule have to be investigated further.</Description>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="4203">
+			<TBUID>C5689773-87C7-2402-73E9-11132695AC63</TBUID>
+			<Name>TMTR-0016: SPLINTER RAT TCP Connection (ATT&amp;CK T1094)</Name>
+			<Description>A remote access tool (or RAT) is a software used to access a remote computer often used for malicious activities. This smart rule identifies suspicious RAT traffic.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>271</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion></MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="2923">
 			<TBUID>B56A1DA5-97B6-1EEF-B3AC-C423B9D1E6C5</TBUID>
 			<Name>Identified Too Many Compressed HTTP Responses (ATT&amp;CK T1002)</Name>
@@ -1656,31 +1681,6 @@ Note: Configuration options are provided to set the count, time period and event
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>3</RecommendationsMode>
 			<CvssScore>7.80</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="4203">
-			<TBUID>C5689773-87C7-2402-73E9-11132695AC63</TBUID>
-			<Name>TMTR-0016: SPLINTER RAT TCP Connection (ATT&amp;CK T1094)</Name>
-			<Description>A remote access tool (or RAT) is a software used to access a remote computer often used for malicious activities. This smart rule identifies suspicious RAT traffic.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>271</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion></MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
@@ -2228,6 +2228,33 @@ NOTE: This rule will prevent only the outgoing IP Messenger traffic. To prevent 
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="5013">
+			<TBUID>2B2CE9E2-0512-F86C-5910-54A01794B5E1</TBUID>
+			<Name>TeamViewer (ATT&amp;CK T1219)</Name>
+			<Description>This is a heuristics based filter which detects the usage of TeamViewer, a remote administration tool. Configuration options are provided to set the event frequency of this filter.
+
+Note: This filter detects and blocks the use of TeamViewer</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>325</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>5.2.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>-1</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="6293">
 			<TBUID>04A0EF26-AD16-7F55-02F1-5415BD0C6F88</TBUID>
 			<Name>Remote Schedule Task &apos;Run&apos; Through SMBv2 Protocol Detected (ATT&amp;CK T1053)</Name>
@@ -2280,14 +2307,13 @@ Note: A configuration option is provided to set the event frequency and to creat
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="5013">
-			<TBUID>2B2CE9E2-0512-F86C-5910-54A01794B5E1</TBUID>
-			<Name>TeamViewer (ATT&amp;CK T1219)</Name>
-			<Description>This is a heuristics based filter which detects the usage of TeamViewer, a remote administration tool. Configuration options are provided to set the event frequency of this filter.
-
-Note: This filter detects and blocks the use of TeamViewer</Description>
+		<PayloadFilter2 doNotMerge="true" id="5014">
+			<TBUID>F6A032C9-B1A6-490F-39C2-62D76B5507F9</TBUID>
+			<Name>Windows Live FolderShare (ATT&amp;CK T1102)</Name>
+			<Description>This filter detects Windows Live FolderShare (currently known as Windows Live Sync) P2P client traffic based on heuristics. It also provides configuration options to set the event frequency of the filter.
+Note: This filter only detects FolderShare traffic and blocks non-encrypted transfers only.</Description>
 			<Priority>2</Priority>
-			<ConnectionTypeID>325</ConnectionTypeID>
+			<ConnectionTypeID>320</ConnectionTypeID>
 			<ScheduleID isNull="true"/>
 			<DisableLog>false</DisableLog>
 			<LogPacketDrop>true</LogPacketDrop>
@@ -2359,13 +2385,14 @@ Note: CBC Based cipher suites in SSLv3.0 protocol are also used for legitimate p
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="5014">
-			<TBUID>F6A032C9-B1A6-490F-39C2-62D76B5507F9</TBUID>
-			<Name>Windows Live FolderShare (ATT&amp;CK T1102)</Name>
-			<Description>This filter detects Windows Live FolderShare (currently known as Windows Live Sync) P2P client traffic based on heuristics. It also provides configuration options to set the event frequency of the filter.
-Note: This filter only detects FolderShare traffic and blocks non-encrypted transfers only.</Description>
+		<PayloadFilter2 doNotMerge="true" id="5015">
+			<TBUID>56F3FDC1-C1B5-533C-44E1-B6F9FAEF668F</TBUID>
+			<Name>Yahoo! Messenger File Transfers (ATT&amp;CK T1102)</Name>
+			<Description>This is a heuristics based filter that blocks Yahoo! Messenger file transfers. Configuration options are provided to set the event frequency of this filter.
+
+Note: The filter can not detect Yahoo Messenger File Transfer over HTTP connection method.</Description>
 			<Priority>2</Priority>
-			<ConnectionTypeID>320</ConnectionTypeID>
+			<ConnectionTypeID>322</ConnectionTypeID>
 			<ScheduleID isNull="true"/>
 			<DisableLog>false</DisableLog>
 			<LogPacketDrop>true</LogPacketDrop>
@@ -2406,33 +2433,6 @@ Note: This filter only detects FolderShare traffic and blocks non-encrypted tran
 			<Alert>false</Alert>
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="5015">
-			<TBUID>56F3FDC1-C1B5-533C-44E1-B6F9FAEF668F</TBUID>
-			<Name>Yahoo! Messenger File Transfers (ATT&amp;CK T1102)</Name>
-			<Description>This is a heuristics based filter that blocks Yahoo! Messenger file transfers. Configuration options are provided to set the event frequency of this filter.
-
-Note: The filter can not detect Yahoo Messenger File Transfer over HTTP connection method.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>322</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>5.2.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>-1</RecommendationsMode>
 			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
@@ -2540,6 +2540,83 @@ This is a heuristic based rule, which logs SSL traffic with weak Cipher.</Descri
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="7070">
+			<TBUID>FDBE0725-C0E3-AAB8-DBD7-05A0CBA15F09</TBUID>
+			<Name>Identified Usage Of PAExec Command Line Tool (ATT&amp;CK T1035)</Name>
+			<Description>PAExec is a command line tool that execute processes on remote systems and redirect console application output to the local system so that these applications appear to be running locally. This rule identifies the use of PAExec tool through SMB share. PAExec is very powerful tool and used by malware and exploits for lateral movement in the network.
+
+Note: Administrators are suggested to add trusted IP addresses in the configuration page. The rule will block all PAExec attempts unless configured.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>343</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>1</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="7071">
+			<TBUID>601AC30F-F8C6-7EAC-F428-47D9F40A8958</TBUID>
+			<Name>Identify Downloading Of PowerShell Scripts Through SMB Share (ATT&amp;CK T1086)</Name>
+			<Description>PowerShell may also be used to download and run PowerShell scripts from the Internet, which can be executed from disk or in memory without touching disk. Adversaries may use PowerShell to execute malicious PowerShell scripts that may cause Damage of the system.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>355</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion></MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>1</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="7072">
+			<TBUID>C87AE28B-2FE6-F999-0517-9D7F2A4B8F04</TBUID>
+			<Name>WinRM Service Detected &amp; Powershell RCE Over HTTP - Client (ATT&amp;CK T1028)</Name>
+			<Description>Windows Remote Management (WinRM) is the name of both a Windows service and a protocol that allows a user to interact with a remote system (e.g., run an executable, modify the Registry, modify services). This filter detects its generic usage as well as through PowerShell.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>377</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>2</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion></MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="6561">
 			<TBUID>D01CA71F-E43D-C9DE-BE47-01E5D32979E3</TBUID>
 			<Name>Identified Remote Service Creation Over DCE/RPC Protocol (ATT&amp;CK T1050)</Name>
@@ -2561,6 +2638,58 @@ This is a heuristic based rule, which logs SSL traffic with weak Cipher.</Descri
 			<Alert>false</Alert>
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="7073">
+			<TBUID>24786B45-FCA8-276F-95BE-20AE5AF52817</TBUID>
+			<Name>WinRM Service Detected &amp; Powershell RCE Over HTTP (ATT&amp;CK T1028)</Name>
+			<Description>Windows Remote Management (WinRM) is the name of both a Windows service and a protocol that allows a user to interact with a remote system (e.g., run an executable, modify the Registry, modify services). This filter detects its generic usage as well as through PowerShell.
+
+Note: In some network environments, this rule can generate many triggers and will need further investigation to confirm an attack.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>371</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>3</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion></MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="5027">
+			<TBUID>0A8B03D3-F512-B5BA-5AEA-E4D47E756E07</TBUID>
+			<Name>Radmin (ATT&amp;CK T1219)</Name>
+			<Description>This is a heuristics based filter which detects the usage of Radmin, a remote administration tool. Configuration options are provided to set the event frequency of this filter.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>325</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>5.2.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>-1</RecommendationsMode>
 			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
@@ -2589,31 +2718,6 @@ Supported Platforms : non-Windows</Description>
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>-1</RecommendationsMode>
 			<CvssScore>0.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="5027">
-			<TBUID>0A8B03D3-F512-B5BA-5AEA-E4D47E756E07</TBUID>
-			<Name>Radmin (ATT&amp;CK T1219)</Name>
-			<Description>This is a heuristics based filter which detects the usage of Radmin, a remote administration tool. Configuration options are provided to set the event frequency of this filter.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>325</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>5.2.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>-1</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
@@ -2850,31 +2954,6 @@ Note: Configuration options have been provided to select the file extensions. Wi
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="1220">
-			<TBUID>9A31C777-ACF5-7627-77BC-4C4AFC21EEE7</TBUID>
-			<Name>Detect UPX Packed Executable Download (ATT&amp;CK T1045)</Name>
-			<Description>UPX is a universal file compressor and packer for executable files. This filter blocks the download to UPX packed executable files.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>290</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion></MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>9.30</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="4292">
 			<TBUID>33569D94-0A79-8581-4ADF-FA9C285AD108</TBUID>
 			<Name>HTTP Web Client Decoding</Name>
@@ -2897,6 +2976,31 @@ Note: Configuration options have been provided to select the file extensions. Wi
 			<DependedOn>true</DependedOn>
 			<RecommendationsMode>1</RecommendationsMode>
 			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="1220">
+			<TBUID>9A31C777-ACF5-7627-77BC-4C4AFC21EEE7</TBUID>
+			<Name>Detect UPX Packed Executable Download (ATT&amp;CK T1045)</Name>
+			<Description>UPX is a universal file compressor and packer for executable files. This filter blocks the download to UPX packed executable files.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>290</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion></MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
+			<CvssScore>9.30</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
@@ -3358,33 +3462,6 @@ Note: Compression algorithm in SSL/TLS protocol is also used for legitimate purp
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="5870">
-			<TBUID>625B1F4D-70F6-32E9-18F4-1A78C524E34D</TBUID>
-			<Name>Heuristic Detection Of Suspicious Digital Certificate (ATT&amp;CK T1032)</Name>
-			<Description>This rule heuristically detects the exchange of Secure Socket Layer (SSL) certificate, which is being used to create reverse HTTPS channel from compromised machine.
-
-Note: Configuration options are provided to configure valid/legitimate CAs (Certificate Authority) if this rule detects any benign traffic.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>271</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>5.2.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="3054">
 			<TBUID>F2B3EC84-F1CB-EC42-8082-CEF905D85A10</TBUID>
 			<Name>Identified OpenSSL SRP Cipher Suite In Server Hello Message (ATT&amp;CK T1032)</Name>
@@ -3431,6 +3508,33 @@ Note: Configuration options are provided to configure valid/legitimate CAs (Cert
 			<Alert>false</Alert>
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>-1</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="5870">
+			<TBUID>625B1F4D-70F6-32E9-18F4-1A78C524E34D</TBUID>
+			<Name>Heuristic Detection Of Suspicious Digital Certificate (ATT&amp;CK T1032)</Name>
+			<Description>This rule heuristically detects the exchange of Secure Socket Layer (SSL) certificate, which is being used to create reverse HTTPS channel from compromised machine.
+
+Note: Configuration options are provided to configure valid/legitimate CAs (Certificate Authority) if this rule detects any benign traffic.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>271</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>5.2.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
 			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
@@ -3642,31 +3746,6 @@ NOTE: Telegram Bot service has been known to be used by malware like Telecrypt f
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
 		</PayloadFilter2>
-		<PayloadFilter2 doNotMerge="true" id="6397">
-			<TBUID>8EF9201A-F997-3E0D-DE63-91CADDAFB37F</TBUID>
-			<Name>Identified Potentially Malicious RAT Traffic - I (ATT&amp;CK T1094)</Name>
-			<Description>A remote access tool (or RAT) is a software used to access a remote computer often used for malicious activities. This smart rule identifies suspicious RAT traffic.</Description>
-			<Priority>2</Priority>
-			<ConnectionTypeID>271</ConnectionTypeID>
-			<ScheduleID isNull="true"/>
-			<DisableLog>false</DisableLog>
-			<LogPacketDrop>true</LogPacketDrop>
-			<LogPacketModify>true</LogPacketModify>
-			<IncludePacketData>false</IncludePacketData>
-			<Severity>4</Severity>
-			<Mode>1</Mode>
-			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<LogFirstPduTimeout>300</LogFirstPduTimeout>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<RequiresTBUIDs></RequiresTBUIDs>
-			<Alert>false</Alert>
-			<DependedOn>false</DependedOn>
-			<RecommendationsMode>3</RecommendationsMode>
-			<CvssScore>-1.00</CvssScore>
-			<DebugMode>false</DebugMode>
-			<RuleContextID isNull="true"/>
-		</PayloadFilter2>
 		<PayloadFilter2 doNotMerge="true" id="4861">
 			<TBUID>D083181F-22B5-94E4-A691-7DC4A3966E73</TBUID>
 			<Name>Detected Virtual Network Computing (VNC) Server Traffic (ATT&amp;CK T1021)</Name>
@@ -3688,6 +3767,31 @@ NOTE: Telegram Bot service has been known to be used by malware like Telecrypt f
 			<Alert>false</Alert>
 			<DependedOn>false</DependedOn>
 			<RecommendationsMode>-1</RecommendationsMode>
+			<CvssScore>-1.00</CvssScore>
+			<DebugMode>false</DebugMode>
+			<RuleContextID isNull="true"/>
+		</PayloadFilter2>
+		<PayloadFilter2 doNotMerge="true" id="6397">
+			<TBUID>8EF9201A-F997-3E0D-DE63-91CADDAFB37F</TBUID>
+			<Name>Identified Potentially Malicious RAT Traffic - I (ATT&amp;CK T1094)</Name>
+			<Description>A remote access tool (or RAT) is a software used to access a remote computer often used for malicious activities. This smart rule identifies suspicious RAT traffic.</Description>
+			<Priority>2</Priority>
+			<ConnectionTypeID>271</ConnectionTypeID>
+			<ScheduleID isNull="true"/>
+			<DisableLog>false</DisableLog>
+			<LogPacketDrop>true</LogPacketDrop>
+			<LogPacketModify>true</LogPacketModify>
+			<IncludePacketData>false</IncludePacketData>
+			<Severity>4</Severity>
+			<Mode>1</Mode>
+			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<LogFirstPduTimeout>300</LogFirstPduTimeout>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Alert>false</Alert>
+			<DependedOn>false</DependedOn>
+			<RecommendationsMode>3</RecommendationsMode>
 			<CvssScore>-1.00</CvssScore>
 			<DebugMode>false</DebugMode>
 			<RuleContextID isNull="true"/>
@@ -6520,6 +6624,14 @@ logon failure</Value>
 			<Value>Informational</Value>
 			<UserEditable>false</UserEditable>
 		</PayloadFilter2Metadata>
+		<PayloadFilter2Metadata doNotMerge="true" id="1014">
+			<TBUID>42BB22E7-FBFD-6610-D83D-09C91045DA4E</TBUID>
+			<Version>1</Version>
+			<PayloadFilter2ID>7070</PayloadFilter2ID>
+			<Name>AllowedIP</Name>
+			<Value></Value>
+			<UserEditable>true</UserEditable>
+		</PayloadFilter2Metadata>
 	</PayloadFilter2Metadatas>
 	<PayloadFilter2MetadataOverrides>
 		<PayloadFilter2MetadataOverride id="1">
@@ -7857,6 +7969,25 @@ logon failure</Value>
 			<MinimumAgentVersion></MinimumAgentVersion>
 			<RecommendationsMode>-1</RecommendationsMode>
 		</ConnectionType>
+		<ConnectionType doNotMerge="true" id="377">
+			<TBUID>20577010-627A-BD30-57DA-729D9D200B9A</TBUID>
+			<Name>Windows Remote Management Client</Name>
+			<Description>Identify the usage of WinRM on client machine to detect the originating machine in case of using WinRM for lateral movement.</Description>
+			<Direction>2</Direction>
+			<Protocol>6</Protocol>
+			<PortType>1</PortType>
+			<Ports>5985</Ports>
+			<PortListID isNull="true"/>
+			<IcmpType1>8</IcmpType1>
+			<IcmpType2>0</IcmpType2>
+			<Version>2</Version>
+			<Type>2</Type>
+			<UserEdited>false</UserEdited>
+			<RequiresTBUIDs></RequiresTBUIDs>
+			<Category></Category>
+			<MinimumAgentVersion></MinimumAgentVersion>
+			<RecommendationsMode>-1</RecommendationsMode>
+		</ConnectionType>
 	</ConnectionTypes>
 	<ConnectionTypeOverrides/>
 	<ConnectionTypeMetadatas>
@@ -7962,1018 +8093,1042 @@ logon failure</Value>
 	<SecurityProfilePacketFilterInterfaceTypes/>
 	<SecurityProfileStatefulFilters/>
 	<SecurityProfilePayloadFilter2s>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="1">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2467</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="2">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3449</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="3">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5870</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="4">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4177</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="5">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2298</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="6">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6293</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="7">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5007</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="8">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4990</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="9">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4042</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="10">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3448</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="11">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4160</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="12">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4379</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="13">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3312</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="14">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2297</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="15">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4043</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="16">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4989</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="17">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2331</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="18">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6864</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="19">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4107</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="20">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6393</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="21">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4192</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="22">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7007</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="23">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6865</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="24">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3332</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="25">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5361</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="26">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5782</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="27">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7005</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="28">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6394</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="29">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5008</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="30">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7004</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="31">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6866</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="32">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4198</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="33">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5781</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="34">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6399</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="35">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>1252</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="36">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3614</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="37">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4037</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="38">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6962</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="39">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4180</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="40">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5162</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="41">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4197</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="42">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5213</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="43">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4985</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="44">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5728</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="45">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6397</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="46">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7006</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="47">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6295</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="48">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2338</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="49">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6485</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="50">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>1220</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="51">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5330</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="52">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2923</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="53">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6398</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="54">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6347</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="55">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2337</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="56">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6294</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="57">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4041</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="58">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7018</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="59">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6484</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="60">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>2458</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="61">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3043</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="62">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6226</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="63">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5004</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="64">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5486</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="65">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="512">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5830</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="66">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="513">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4998</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="67">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="514">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>1358</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="68">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="515">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5015</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="69">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="516">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6962</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="517">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3271</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="70">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="518">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5912</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="71">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="519">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3610</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="72">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="520">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5031</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="73">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="521">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4203</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="74">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="522">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5725</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="75">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="523">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5014</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="76">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="524">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>2121</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="77">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="525">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>2881</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="78">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="526">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3609</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="79">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="527">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>1307</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="80">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="528">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5032</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="81">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6902</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="82">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="529">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4983</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="83">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="530">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4285</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="84">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="531">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>1309</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="85">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="532">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3167</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="86">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7008</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="87">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="533">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5644</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="88">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="534">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4861</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="89">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="535">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3201</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="90">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="536">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4201</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="91">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="537">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5507</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="92">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="538">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4199</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="93">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="539">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3357</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="94">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="540">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>2883</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="95">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="541">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5826</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="96">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="542">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>6333</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="97">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>6903</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="98">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="543">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4977</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="99">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="544">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4994</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="100">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="545">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>6196</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="101">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="546">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>6424</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="102">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="547">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7008</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="548">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3225</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="103">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="549">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>2640</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="104">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="550">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5027</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="105">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7003</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="106">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="551">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5257</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="107">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="552">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4046</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="108">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="553">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5272</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="109">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="554">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3342</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="110">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="555">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3105</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="111">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4292</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="112">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>5509</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="113">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3054</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="114">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4189</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="115">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4976</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="116">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7002</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="117">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>3015</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="118">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>4979</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="119">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="556">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>6838</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="120">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="557">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4292</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="558">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7007</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="559">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5509</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="560">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3054</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="561">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4189</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="562">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4976</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="563">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3015</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="564">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4979</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="565">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5013</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="121">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="566">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>1297</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="122">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="567">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5665</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="123">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="568">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>3053</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="124">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="569">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4996</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="125">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="570">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4581</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="126">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="571">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5736</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="127">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="572">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>2330</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="128">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="573">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>2880</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="129">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="574">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5614</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="130">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7001</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="131">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="575">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4290</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="132">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="576">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>6561</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="133">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<PayloadFilter2ID>7009</PayloadFilter2ID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="134">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="577">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>6440</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="135">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="578">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>2639</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="136">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="579">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7009</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="580">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>1950</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="137">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="581">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5064</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="138">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="582">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5030</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="139">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="583">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>5047</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
-		<SecurityProfilePayloadFilter2 isBridge="true" id="140">
+		<SecurityProfilePayloadFilter2 isBridge="true" id="584">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<PayloadFilter2ID>4204</PayloadFilter2ID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="441">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2467</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="442">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3449</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="443">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5870</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="444">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4177</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="445">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7004</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="446">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2298</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="447">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6293</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="448">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5007</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="449">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4990</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="450">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6902</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="451">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4042</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="452">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3448</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="453">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4160</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="454">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7072</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="455">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4379</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="456">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7003</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="457">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3312</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="458">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2297</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="459">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4043</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="460">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4989</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="461">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2331</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="462">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6903</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="463">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7071</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="464">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4107</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="465">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7006</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="466">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6393</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="467">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4192</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="468">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3332</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="469">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7073</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="470">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5361</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="471">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5782</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="472">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7005</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="473">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6866</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="474">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6394</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="475">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5008</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="476">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4198</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="477">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5781</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="478">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6399</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="479">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>1252</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="480">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3614</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="481">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4037</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="482">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6865</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="483">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7001</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="484">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4180</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="485">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5162</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="486">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4197</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="487">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5213</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="488">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6864</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="489">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4985</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="490">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5728</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="491">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7002</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="492">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6397</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="493">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6295</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="494">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2338</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="495">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6485</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="496">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7070</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="497">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>1220</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="498">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5330</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="499">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2923</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="500">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6398</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="501">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6347</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="502">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>7018</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="503">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2337</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="504">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6294</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="505">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>4041</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="506">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6484</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="507">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>2458</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="508">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>3043</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="509">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>6226</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="510">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5004</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
+		<SecurityProfilePayloadFilter2 isBridge="true" id="511">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<PayloadFilter2ID>5486</PayloadFilter2ID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfilePayloadFilter2>
 	</SecurityProfilePayloadFilter2s>
 	<SecurityProfilePayloadFilter2InterfaceTypes/>
 	<SecurityProfileConnectionTypes>
-		<SecurityProfileConnectionType isBridge="true" id="1">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>211</ConnectionTypeID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="2">
+		<SecurityProfileConnectionType isBridge="true" id="88">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>304</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="3">
+		<SecurityProfileConnectionType isBridge="true" id="89">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>215</ConnectionTypeID>
+			<ConnectionTypeID>211</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="4">
+		<SecurityProfileConnectionType isBridge="true" id="90">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>325</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="5">
+		<SecurityProfileConnectionType isBridge="true" id="91">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<ConnectionTypeID>215</ConnectionTypeID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfileConnectionType>
+		<SecurityProfileConnectionType isBridge="true" id="92">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>355</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="6">
+		<SecurityProfileConnectionType isBridge="true" id="93">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>270</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="7">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>257</ConnectionTypeID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="8">
+		<SecurityProfileConnectionType isBridge="true" id="94">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>330</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="9">
+		<SecurityProfileConnectionType isBridge="true" id="95">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<ConnectionTypeID>257</ConnectionTypeID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfileConnectionType>
+		<SecurityProfileConnectionType isBridge="true" id="96">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>308</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="10">
+		<SecurityProfileConnectionType isBridge="true" id="97">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>322</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="11">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>326</ConnectionTypeID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="12">
+		<SecurityProfileConnectionType isBridge="true" id="98">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>271</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="13">
+		<SecurityProfileConnectionType isBridge="true" id="99">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>343</ConnectionTypeID>
+			<ConnectionTypeID>326</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="14">
+		<SecurityProfileConnectionType isBridge="true" id="100">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>72</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="15">
+		<SecurityProfileConnectionType isBridge="true" id="101">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<ConnectionTypeID>343</ConnectionTypeID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfileConnectionType>
+		<SecurityProfileConnectionType isBridge="true" id="102">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>155</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="16">
+		<SecurityProfileConnectionType isBridge="true" id="103">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>227</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="17">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>236</ConnectionTypeID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="18">
+		<SecurityProfileConnectionType isBridge="true" id="104">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>361</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="19">
+		<SecurityProfileConnectionType isBridge="true" id="105">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>371</ConnectionTypeID>
+			<ConnectionTypeID>236</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="20">
+		<SecurityProfileConnectionType isBridge="true" id="106">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>285</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="21">
+		<SecurityProfileConnectionType isBridge="true" id="107">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>323</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="22">
+		<SecurityProfileConnectionType isBridge="true" id="108">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>213</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="23">
+		<SecurityProfileConnectionType isBridge="true" id="109">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>263</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="24">
+		<SecurityProfileConnectionType isBridge="true" id="110">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>303</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="25">
+		<SecurityProfileConnectionType isBridge="true" id="111">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<ConnectionTypeID>371</ConnectionTypeID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfileConnectionType>
+		<SecurityProfileConnectionType isBridge="true" id="112">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>328</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="26">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<ConnectionTypeID>350</ConnectionTypeID>
-			<AllInterfaceTypes>true</AllInterfaceTypes>
-		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="27">
+		<SecurityProfileConnectionType isBridge="true" id="113">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>311</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="28">
+		<SecurityProfileConnectionType isBridge="true" id="114">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<ConnectionTypeID>350</ConnectionTypeID>
+			<AllInterfaceTypes>true</AllInterfaceTypes>
+		</SecurityProfileConnectionType>
+		<SecurityProfileConnectionType isBridge="true" id="115">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>290</ConnectionTypeID>
 			<AllInterfaceTypes>true</AllInterfaceTypes>
 		</SecurityProfileConnectionType>
-		<SecurityProfileConnectionType isBridge="true" id="29">
+		<SecurityProfileConnectionType isBridge="true" id="116">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<ConnectionTypeID>320</ConnectionTypeID>
@@ -9031,6 +9186,20 @@ The rule also provides configuration options to ignore monitoring services and t
 			<Tags></Tags>
 			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
 		</IntegrityRule>
+		<IntegrityRule doNotMerge="true" id="2">
+			<TBUID>4255223A-631D-241C-8C11-7C49C8ED33D5</TBUID>
+			<Name>Microsoft Windows - System .dll or .exe files modified (ATT&amp;CK T1013)</Name>
+			<Description>This rule alerts when there is a change in file attributes Created, LastModified, Permissions, Owner, Group, Size and Contents of .dll or .exe files under %WINDIR%\system32 path. Also the rule provides configuration option to ignore files for monitoring and to select the file attributes to monitor.</Description>
+			<Severity>3</Severity>
+			<AllowOnChange>true</AllowOnChange>
+			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<Alert>false</Alert>
+			<RecommendationsMode>1</RecommendationsMode>
+			<Tags></Tags>
+			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
+		</IntegrityRule>
 		<IntegrityRule doNotMerge="true" id="66">
 			<TBUID>0666E804-FA3F-250C-76AA-656D3C7DE247</TBUID>
 			<Name>TMTR-0005: Suspicious Files Detected In Application Directories</Name>
@@ -9044,20 +9213,6 @@ This rule is applicable to Windows platforms.</Description>
 			<RequiresConfiguration>false</RequiresConfiguration>
 			<Alert>false</Alert>
 			<RecommendationsMode>-1</RecommendationsMode>
-			<Tags></Tags>
-			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
-		</IntegrityRule>
-		<IntegrityRule doNotMerge="true" id="2">
-			<TBUID>4255223A-631D-241C-8C11-7C49C8ED33D5</TBUID>
-			<Name>Microsoft Windows - System .dll or .exe files modified (ATT&amp;CK T1013)</Name>
-			<Description>This rule alerts when there is a change in file attributes Created, LastModified, Permissions, Owner, Group, Size and Contents of .dll or .exe files under %WINDIR%\system32 path. Also the rule provides configuration option to ignore files for monitoring and to select the file attributes to monitor.</Description>
-			<Severity>3</Severity>
-			<AllowOnChange>true</AllowOnChange>
-			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<Alert>false</Alert>
-			<RecommendationsMode>1</RecommendationsMode>
 			<Tags></Tags>
 			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
 		</IntegrityRule>
@@ -9299,6 +9454,22 @@ This rule is applicable to Windows platforms.</Description>
 			<Tags></Tags>
 			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
 		</IntegrityRule>
+		<IntegrityRule doNotMerge="true" id="81">
+			<TBUID>3473B2B0-C5BE-770D-337C-494C40E47AAF</TBUID>
+			<Name>TMTR-0026: Suspicious Files Detected In Program FIles Folder</Name>
+			<Description>This generic rule is intended to alert when highly suspicious malware specific file entity is created or modified.
+
+This rule is applicable to Windows platforms.</Description>
+			<Severity>2</Severity>
+			<AllowOnChange>true</AllowOnChange>
+			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<Alert>false</Alert>
+			<RecommendationsMode>-1</RecommendationsMode>
+			<Tags></Tags>
+			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
+		</IntegrityRule>
 		<IntegrityRule doNotMerge="true" id="145">
 			<TBUID>238CFE8C-C4FE-5F30-BB60-57F95BD7BEF9</TBUID>
 			<Name>Component Object Model Hijacking (ATT&amp;CK T1122, T1112)</Name>
@@ -9314,12 +9485,10 @@ Hijacking a COM object requires a change in the Windows Registry to replace a re
 			<Tags></Tags>
 			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
 		</IntegrityRule>
-		<IntegrityRule doNotMerge="true" id="81">
-			<TBUID>3473B2B0-C5BE-770D-337C-494C40E47AAF</TBUID>
-			<Name>TMTR-0026: Suspicious Files Detected In Program FIles Folder</Name>
-			<Description>This generic rule is intended to alert when highly suspicious malware specific file entity is created or modified.
-
-This rule is applicable to Windows platforms.</Description>
+		<IntegrityRule doNotMerge="true" id="146">
+			<TBUID>6DAD9619-F733-CC3C-35FB-735E7A6DC7A6</TBUID>
+			<Name>Port Monitor (ATT&amp;CK T1013)</Name>
+			<Description>Adversaries can use this technique to load malicious code at startup that will persist on system reboot and execute as SYSTEM.</Description>
 			<Severity>2</Severity>
 			<AllowOnChange>true</AllowOnChange>
 			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
@@ -9346,10 +9515,12 @@ This rule is applicable to Windows platforms.</Description>
 			<Tags></Tags>
 			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
 		</IntegrityRule>
-		<IntegrityRule doNotMerge="true" id="146">
-			<TBUID>6DAD9619-F733-CC3C-35FB-735E7A6DC7A6</TBUID>
-			<Name>Port Monitor (ATT&amp;CK T1013)</Name>
-			<Description>Adversaries can use this technique to load malicious code at startup that will persist on system reboot and execute as SYSTEM.</Description>
+		<IntegrityRule doNotMerge="true" id="147">
+			<TBUID>5E8890B4-EBDF-2AE9-D386-943C5F703A61</TBUID>
+			<Name>Application Shimming (ATT&amp;CK T1138)</Name>
+			<Description>The Microsoft Windows Application Compatibility Infrastructure/Framework (Application Shim) was created to allow for backward compatibility of software as the operating system codebase changes over time.
+
+However, certain shims can be abused. Utilizing these shims may allow an adversary to perform several malicious acts such as elevate privileges, install backdoors, disable defenses like Windows Defender, etc.</Description>
 			<Severity>2</Severity>
 			<AllowOnChange>true</AllowOnChange>
 			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
@@ -9376,41 +9547,11 @@ This rule is applicable to Windows platforms.</Description>
 			<Tags></Tags>
 			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
 		</IntegrityRule>
-		<IntegrityRule doNotMerge="true" id="147">
-			<TBUID>5E8890B4-EBDF-2AE9-D386-943C5F703A61</TBUID>
-			<Name>Application Shimming (ATT&amp;CK T1138)</Name>
-			<Description>The Microsoft Windows Application Compatibility Infrastructure/Framework (Application Shim) was created to allow for backward compatibility of software as the operating system codebase changes over time.
-
-However, certain shims can be abused. Utilizing these shims may allow an adversary to perform several malicious acts such as elevate privileges, install backdoors, disable defenses like Windows Defender, etc.</Description>
-			<Severity>2</Severity>
-			<AllowOnChange>true</AllowOnChange>
-			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<Alert>false</Alert>
-			<RecommendationsMode>-1</RecommendationsMode>
-			<Tags></Tags>
-			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
-		</IntegrityRule>
 		<IntegrityRule doNotMerge="true" id="148">
 			<TBUID>9672834F-9733-EABE-5BF9-3A0058D5EA34</TBUID>
 			<Name>AppCert DLLs (ATT&amp;CK T1182)</Name>
 			<Description>Dynamic-link libraries (DLLs) that are specified in the AppCertDLLs value in the Registry key HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager are loaded into every process that calls various ubiquitously used application programming interface (API) functions.
 This value can be abused to obtain persistence and privilege escalation by causing a malicious DLL to be loaded and run in the context of separate processes on the computer.</Description>
-			<Severity>2</Severity>
-			<AllowOnChange>true</AllowOnChange>
-			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
-			<UserEdited>false</UserEdited>
-			<RequiresConfiguration>false</RequiresConfiguration>
-			<Alert>false</Alert>
-			<RecommendationsMode>-1</RecommendationsMode>
-			<Tags></Tags>
-			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
-		</IntegrityRule>
-		<IntegrityRule doNotMerge="true" id="149">
-			<TBUID>08420A46-33D0-D154-35A3-279EB8D2A912</TBUID>
-			<Name>PowerShell &amp; CommandLine (ATT&amp;CK T1086,T1059)</Name>
-			<Description>This rule monitors the execution of the command prompt and PowerShell, along with PowerShell execution policy registry key, and the WinRM service.</Description>
 			<Severity>2</Severity>
 			<AllowOnChange>true</AllowOnChange>
 			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
@@ -9428,6 +9569,20 @@ This value can be abused to obtain persistence and privilege escalation by causi
 
 This rule is applicable to Windows platforms.</Description>
 			<Severity>1</Severity>
+			<AllowOnChange>true</AllowOnChange>
+			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
+			<UserEdited>false</UserEdited>
+			<RequiresConfiguration>false</RequiresConfiguration>
+			<Alert>false</Alert>
+			<RecommendationsMode>-1</RecommendationsMode>
+			<Tags></Tags>
+			<MinimumManagerVersion>6.0.0</MinimumManagerVersion>
+		</IntegrityRule>
+		<IntegrityRule doNotMerge="true" id="149">
+			<TBUID>08420A46-33D0-D154-35A3-279EB8D2A912</TBUID>
+			<Name>PowerShell &amp; CommandLine (ATT&amp;CK T1086,T1059)</Name>
+			<Description>This rule monitors the execution of the command prompt and PowerShell, along with PowerShell execution policy registry key, and the WinRM service.</Description>
+			<Severity>2</Severity>
 			<AllowOnChange>true</AllowOnChange>
 			<MinimumAgentVersion>6.0.0.0</MinimumAgentVersion>
 			<UserEdited>false</UserEdited>
@@ -9862,7 +10017,7 @@ This rule is applicable to Windows platforms.</Description>
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<IntegrityRuleID>150</IntegrityRuleID>
-			<Alert>true</Alert>
+			<Alert>false</Alert>
 			<AllowOnChange isNull="true"/>
 			<OverrideMetadata>false</OverrideMetadata>
 			<RecommendationsMode isNull="true"/>
@@ -10580,235 +10735,230 @@ This rule is applicable to Windows platforms.</Description>
 		</IntegrityRuleMetadataOverride>
 	</IntegrityRuleMetadataOverrides>
 	<SecurityProfileIntegrityRules>
-		<SecurityProfileIntegrityRule isBridge="true" id="64">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>73</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="65">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>64</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="66">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>150</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="67">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>77</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="68">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>158</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="69">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>65</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="70">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>82</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="71">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>69</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="72">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>99</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="73">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>56</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="74">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>1</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="75">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>74</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="76">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>145</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="77">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>108</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="78">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>78</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="79">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>149</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="80">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>66</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="81">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>83</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="82">
-			<TBUID></TBUID>
-			<SecurityProfileID>10</SecurityProfileID>
-			<IntegrityRuleID>104</IntegrityRuleID>
-		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="83">
+		<SecurityProfileIntegrityRule isBridge="true" id="128">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>153</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="84">
+		<SecurityProfileIntegrityRule isBridge="true" id="129">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>144</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="85">
+		<SecurityProfileIntegrityRule isBridge="true" id="130">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>70</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="86">
+		<SecurityProfileIntegrityRule isBridge="true" id="131">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>75</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="87">
+		<SecurityProfileIntegrityRule isBridge="true" id="132">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>148</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="88">
+		<SecurityProfileIntegrityRule isBridge="true" id="133">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>96</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="89">
+		<SecurityProfileIntegrityRule isBridge="true" id="134">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>152</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="90">
+		<SecurityProfileIntegrityRule isBridge="true" id="135">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>2</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="91">
+		<SecurityProfileIntegrityRule isBridge="true" id="136">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>79</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="46">
+		<SecurityProfileIntegrityRule isBridge="true" id="92">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>67</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="47">
+		<SecurityProfileIntegrityRule isBridge="true" id="93">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>71</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="48">
+		<SecurityProfileIntegrityRule isBridge="true" id="94">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>97</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="49">
+		<SecurityProfileIntegrityRule isBridge="true" id="95">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>156</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="50">
+		<SecurityProfileIntegrityRule isBridge="true" id="96">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>147</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="51">
+		<SecurityProfileIntegrityRule isBridge="true" id="97">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>76</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="52">
+		<SecurityProfileIntegrityRule isBridge="true" id="98">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>151</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="53">
+		<SecurityProfileIntegrityRule isBridge="true" id="99">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>59</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="54">
+		<SecurityProfileIntegrityRule isBridge="true" id="100">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>80</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="55">
+		<SecurityProfileIntegrityRule isBridge="true" id="101">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>89</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="56">
+		<SecurityProfileIntegrityRule isBridge="true" id="102">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>63</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="57">
+		<SecurityProfileIntegrityRule isBridge="true" id="103">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>85</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="58">
+		<SecurityProfileIntegrityRule isBridge="true" id="104">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>68</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="59">
+		<SecurityProfileIntegrityRule isBridge="true" id="105">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>159</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="60">
+		<SecurityProfileIntegrityRule isBridge="true" id="106">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>81</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="61">
+		<SecurityProfileIntegrityRule isBridge="true" id="107">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>72</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="62">
+		<SecurityProfileIntegrityRule isBridge="true" id="108">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>155</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
-		<SecurityProfileIntegrityRule isBridge="true" id="63">
+		<SecurityProfileIntegrityRule isBridge="true" id="109">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<IntegrityRuleID>146</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="110">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>73</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="111">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>64</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="112">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>77</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="113">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>158</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="114">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>65</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="115">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>82</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="116">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>69</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="117">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>99</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="118">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>56</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="119">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>1</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="120">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>74</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="121">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>145</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="122">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>108</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="123">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>78</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="124">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>149</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="125">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>66</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="126">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>83</IntegrityRuleID>
+		</SecurityProfileIntegrityRule>
+		<SecurityProfileIntegrityRule isBridge="true" id="127">
+			<TBUID></TBUID>
+			<SecurityProfileID>10</SecurityProfileID>
+			<IntegrityRuleID>104</IntegrityRuleID>
 		</SecurityProfileIntegrityRule>
 	</SecurityProfileIntegrityRules>
 	<LogInspectionRules>
@@ -11134,7 +11284,7 @@ Platform: Microsoft Windows</Description>
 			<LogInspectionRuleID>57</LogInspectionRuleID>
 			<Alert>true</Alert>
 			<AlertMinSeverity>5</AlertMinSeverity>
-			<OverrideMetadata>false</OverrideMetadata>
+			<OverrideMetadata>true</OverrideMetadata>
 			<RecommendationsMode isNull="true"/>
 		</LogInspectionRuleOverride>
 		<LogInspectionRuleOverride id="8">
@@ -17180,504 +17330,942 @@ Platform: Microsoft Windows</Description>
 		</LogInspectionRuleMetadata>
 	</LogInspectionRuleMetadatas>
 	<LogInspectionRuleMetadataOverrides>
-		<LogInspectionRuleMetadataOverride id="1">
+		<LogInspectionRuleMetadataOverride id="71">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1945</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="2">
+		<LogInspectionRuleMetadataOverride id="72">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1944</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="3">
+		<LogInspectionRuleMetadataOverride id="73">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1943</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="4">
+		<LogInspectionRuleMetadataOverride id="74">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1942</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="5">
+		<LogInspectionRuleMetadataOverride id="75">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1941</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="6">
+		<LogInspectionRuleMetadataOverride id="76">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1940</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="7">
+		<LogInspectionRuleMetadataOverride id="77">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1939</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="8">
+		<LogInspectionRuleMetadataOverride id="78">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1938</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="9">
+		<LogInspectionRuleMetadataOverride id="79">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1937</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="10">
+		<LogInspectionRuleMetadataOverride id="80">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1936</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="11">
+		<LogInspectionRuleMetadataOverride id="81">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1935</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="12">
+		<LogInspectionRuleMetadataOverride id="82">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1934</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="13">
+		<LogInspectionRuleMetadataOverride id="83">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1933</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="14">
+		<LogInspectionRuleMetadataOverride id="84">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1932</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="15">
+		<LogInspectionRuleMetadataOverride id="85">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1931</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="16">
+		<LogInspectionRuleMetadataOverride id="86">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1930</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="17">
+		<LogInspectionRuleMetadataOverride id="87">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1929</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="18">
+		<LogInspectionRuleMetadataOverride id="88">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1928</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="19">
+		<LogInspectionRuleMetadataOverride id="89">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1927</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="20">
+		<LogInspectionRuleMetadataOverride id="90">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1926</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="21">
+		<LogInspectionRuleMetadataOverride id="91">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1925</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="22">
+		<LogInspectionRuleMetadataOverride id="92">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1924</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="23">
+		<LogInspectionRuleMetadataOverride id="93">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1923</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="24">
+		<LogInspectionRuleMetadataOverride id="94">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1922</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="25">
+		<LogInspectionRuleMetadataOverride id="95">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1921</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="26">
+		<LogInspectionRuleMetadataOverride id="96">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1920</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="27">
+		<LogInspectionRuleMetadataOverride id="97">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1919</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="28">
+		<LogInspectionRuleMetadataOverride id="98">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1918</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="29">
+		<LogInspectionRuleMetadataOverride id="99">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1917</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="30">
+		<LogInspectionRuleMetadataOverride id="100">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1916</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="31">
+		<LogInspectionRuleMetadataOverride id="101">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1915</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="32">
+		<LogInspectionRuleMetadataOverride id="102">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1914</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="33">
+		<LogInspectionRuleMetadataOverride id="103">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1913</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="34">
+		<LogInspectionRuleMetadataOverride id="104">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1912</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="35">
+		<LogInspectionRuleMetadataOverride id="105">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1911</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="36">
+		<LogInspectionRuleMetadataOverride id="106">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1910</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="37">
+		<LogInspectionRuleMetadataOverride id="107">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1909</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="38">
+		<LogInspectionRuleMetadataOverride id="108">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1908</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="39">
+		<LogInspectionRuleMetadataOverride id="109">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1907</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="40">
+		<LogInspectionRuleMetadataOverride id="110">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1906</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="41">
+		<LogInspectionRuleMetadataOverride id="111">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1905</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="42">
+		<LogInspectionRuleMetadataOverride id="112">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1904</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="43">
+		<LogInspectionRuleMetadataOverride id="113">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1903</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="44">
+		<LogInspectionRuleMetadataOverride id="114">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1902</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="45">
+		<LogInspectionRuleMetadataOverride id="115">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1901</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="46">
+		<LogInspectionRuleMetadataOverride id="116">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1900</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="47">
+		<LogInspectionRuleMetadataOverride id="117">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1899</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="48">
+		<LogInspectionRuleMetadataOverride id="118">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1898</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="49">
+		<LogInspectionRuleMetadataOverride id="119">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1897</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="50">
+		<LogInspectionRuleMetadataOverride id="120">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1896</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="51">
+		<LogInspectionRuleMetadataOverride id="121">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1895</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="52">
+		<LogInspectionRuleMetadataOverride id="122">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1894</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="53">
+		<LogInspectionRuleMetadataOverride id="123">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1893</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="54">
+		<LogInspectionRuleMetadataOverride id="124">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1892</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="55">
+		<LogInspectionRuleMetadataOverride id="125">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1891</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="56">
+		<LogInspectionRuleMetadataOverride id="126">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1890</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="57">
+		<LogInspectionRuleMetadataOverride id="127">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1888</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="58">
+		<LogInspectionRuleMetadataOverride id="128">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1887</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="59">
+		<LogInspectionRuleMetadataOverride id="129">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1886</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="60">
+		<LogInspectionRuleMetadataOverride id="130">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1885</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="61">
+		<LogInspectionRuleMetadataOverride id="131">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1884</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="62">
+		<LogInspectionRuleMetadataOverride id="132">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1883</LogInspectionRuleMetadataID>
-			<Value>1</Value>
+			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="63">
+		<LogInspectionRuleMetadataOverride id="133">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1882</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="64">
+		<LogInspectionRuleMetadataOverride id="134">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1881</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="65">
+		<LogInspectionRuleMetadataOverride id="135">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1880</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="66">
+		<LogInspectionRuleMetadataOverride id="136">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1879</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="67">
+		<LogInspectionRuleMetadataOverride id="137">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1878</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="68">
+		<LogInspectionRuleMetadataOverride id="138">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1874</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="69">
+		<LogInspectionRuleMetadataOverride id="139">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1873</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
-		<LogInspectionRuleMetadataOverride id="70">
+		<LogInspectionRuleMetadataOverride id="140">
 			<SecurityProfileID>10</SecurityProfileID>
 			<HostID isNull="true"/>
 			<LogInspectionRuleMetadataID>1872</LogInspectionRuleMetadataID>
 			<Value>-1</Value>
 		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="141">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1994</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="142">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1820</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="143">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1819</LogInspectionRuleMetadataID>
+			<Value>120</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="144">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1818</LogInspectionRuleMetadataID>
+			<Value>10</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="145">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1817</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="146">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1816</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="147">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1815</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="148">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1814</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="149">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1813</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="150">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1812</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="151">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1811</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="152">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1810</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="153">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1809</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="154">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1808</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="155">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1807</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="156">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1806</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="157">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1805</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="158">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1804</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="159">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1803</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="160">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1802</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="161">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1801</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="162">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1800</LogInspectionRuleMetadataID>
+			<Value>10</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="163">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1799</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="164">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1798</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="165">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1797</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="166">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1796</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="167">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1795</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="168">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1794</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="169">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1793</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="170">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1792</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="171">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1791</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="172">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1790</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="173">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1789</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="174">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1788</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="175">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1787</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="176">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1786</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="177">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1785</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="178">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1784</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="179">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1783</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="180">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1782</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="181">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1781</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="182">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1780</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="183">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1779</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="184">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1778</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="185">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1777</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="186">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1776</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="187">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1775</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="188">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1774</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="189">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1773</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="190">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1772</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="191">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1771</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="192">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1770</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="193">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1769</LogInspectionRuleMetadataID>
+			<Value>120</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="194">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1768</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="195">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1767</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="196">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1766</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="197">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1765</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="198">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1764</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="199">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1763</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="200">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1762</LogInspectionRuleMetadataID>
+			<Value>6</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="201">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1761</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="202">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1760</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="203">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1759</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="204">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1758</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="205">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1757</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="206">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1756</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="207">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1755</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="208">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1754</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="209">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1753</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="210">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1752</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="211">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1751</LogInspectionRuleMetadataID>
+			<Value>-1</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="212">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1750</LogInspectionRuleMetadataID>
+			<Value>eventlog</Value>
+		</LogInspectionRuleMetadataOverride>
+		<LogInspectionRuleMetadataOverride id="213">
+			<SecurityProfileID>10</SecurityProfileID>
+			<HostID isNull="true"/>
+			<LogInspectionRuleMetadataID>1749</LogInspectionRuleMetadataID>
+			<Value>System,Application,Security,Directory Service,File Replication Service</Value>
+		</LogInspectionRuleMetadataOverride>
 	</LogInspectionRuleMetadataOverrides>
 	<SecurityProfileLogInspectionRules>
-		<SecurityProfileLogInspectionRule isBridge="true" id="32">
+		<SecurityProfileLogInspectionRule isBridge="true" id="65">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>48</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="33">
+		<SecurityProfileLogInspectionRule isBridge="true" id="66">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>29</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="34">
+		<SecurityProfileLogInspectionRule isBridge="true" id="67">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>46</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="35">
+		<SecurityProfileLogInspectionRule isBridge="true" id="68">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>31</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="36">
+		<SecurityProfileLogInspectionRule isBridge="true" id="69">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>56</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="37">
+		<SecurityProfileLogInspectionRule isBridge="true" id="70">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>57</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="38">
+		<SecurityProfileLogInspectionRule isBridge="true" id="71">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>59</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="39">
+		<SecurityProfileLogInspectionRule isBridge="true" id="72">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>61</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="40">
+		<SecurityProfileLogInspectionRule isBridge="true" id="73">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>50</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="41">
+		<SecurityProfileLogInspectionRule isBridge="true" id="74">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>63</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="42">
+		<SecurityProfileLogInspectionRule isBridge="true" id="75">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>20</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="43">
+		<SecurityProfileLogInspectionRule isBridge="true" id="76">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>30</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="44">
+		<SecurityProfileLogInspectionRule isBridge="true" id="77">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>47</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="45">
+		<SecurityProfileLogInspectionRule isBridge="true" id="78">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>40</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="46">
+		<SecurityProfileLogInspectionRule isBridge="true" id="79">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>60</LogInspectionRuleID>
 		</SecurityProfileLogInspectionRule>
-		<SecurityProfileLogInspectionRule isBridge="true" id="47">
+		<SecurityProfileLogInspectionRule isBridge="true" id="80">
 			<TBUID></TBUID>
 			<SecurityProfileID>10</SecurityProfileID>
 			<LogInspectionRuleID>62</LogInspectionRuleID>
